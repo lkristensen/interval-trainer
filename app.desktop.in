@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=App
+_Name=Interval Trainer
 Exec=qmlscene qml/Main.qml
 Icon=assets/logo.png
 Terminal=false

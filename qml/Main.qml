@@ -2,6 +2,7 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 import Ubuntu.Layouts 0.1
+import "Lists" 0.1
 
 MainView {
     id: root
@@ -9,8 +10,8 @@ MainView {
     applicationName: 'interval-trainer.lkristensen'
     automaticOrientation: true
 
-    width: units.gu(75)
-    height: units.gu(45)
+    width: units.gu(45)
+    height: units.gu(75)
 
     Layouts {
         id:layouts
@@ -131,7 +132,7 @@ MainView {
 	Rectangle {
             id: timer
             Layouts.item: "timer"
-            color: "yellow"
+            color: Colors.yellow
             anchors {
                 left: parent.left
                 top: parent.top
@@ -140,17 +141,43 @@ MainView {
             }
             border.width: 1
             border.color: "white"
-            Text {
-                text: "01:10"
+            PageHeader {
+                visible: true
+                StyleHints {
+                    backgroundColor: "transparent"
+                    dividerColor: "transparent"
+                }
+
+                trailingActionBar {
+                    actions: [
+                        Action {
+                            id: settingsIcon
+                            objectName: "settingsIcon"
+                            iconName: "settings"
+                            onTriggered: {
+                                console.log("settings");
+                                //mainStack.push(Qt.resolvedUrl("./url.qml"))
+                            }
+                        }
+                    ]
+                }
+            }
+            CircleTimer {
+                percent: 0.66
                 color: "white"
-                font.pointSize: 24
-                anchors.horizontalCenter: parent.horizontalCenter
+		text: "20:13"
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: parent.right
+                }
             }
         }
         Rectangle {
             id: currentExercise
             Layouts.item: "current"
-            color: "yellow"
+            color: Colors.yellow
             border.width: 1
             border.color: "white"
             anchors {
@@ -163,12 +190,13 @@ MainView {
                 text: "Snatch"
                 color: "white"
                 font.pointSize: 24
+                anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
         Rectangle {
             id: nextExercise
-            color: "blue"
+            color: Colors.lightblue
             Layouts.item: "next"
             border.width: 1
             border.color: "white"
@@ -179,9 +207,10 @@ MainView {
                 right: parent.right
             }
             Text {
-                text: "Snatch"
+                text: "Swing"
                 color: "white"
                 font.pointSize: 24
+                anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
@@ -202,10 +231,19 @@ MainView {
                 color: "black"
             }
         }
-        Button {
+        Rectangle {
             id: pauseButton
-            text: "P"
-            color: "yellow"
+            border.width: 1
+            border.color: "white"
+            Icon {
+                name: "media-playback-start"
+                color: "white"
+                width: 36
+                height: 36
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            color: Colors.yellow
             Layouts.item: "play"
             anchors {
                 left: parent.left
@@ -213,17 +251,38 @@ MainView {
                 bottom: parent.bottom
                 right: timer.right
             }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                console.log("Start / stop clicked");
+                }
+            }
         }
-        Button {
+        Rectangle {
             id: musicButton
-            text: "M"
-            color: "yellow"
+            border.width: 1
+            border.color: "white"
+            Icon {
+                name: "close"
+                width: 36
+                height: 36
+                color: "white"
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            color: Colors.yellow
             Layouts.item: "music"
             anchors {
                 left: parent.left
                 top: parent.top
                 bottom: parent.bottom
                 right: parent.right
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    console.log("Music clicked");
+                }
             }
         }
     }

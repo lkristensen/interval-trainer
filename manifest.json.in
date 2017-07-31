@@ -1,8 +1,8 @@
 {
-    "name": "app.bhdouglass",
-    "description": "A simple app template",
+    "name": "interval-trainer.lkristensen",
+    "description": "An interval training app",
     "architecture": "@CLICK_ARCH@",
-    "title": "App Template",
+    "title": "Interval Trainer",
     "hooks": {
         "app": {
             "apparmor": "app.apparmor",
@@ -10,6 +10,6 @@
         }
     },
     "version": "1.0",
-    "maintainer": "Brian Douglass <bhdouglass@gmail.com>",
+    "maintainer": "Laust Lund Kristensen <laustijapan@hotmail.com>",
     "framework" : "ubuntu-sdk-15.04.6"
 }

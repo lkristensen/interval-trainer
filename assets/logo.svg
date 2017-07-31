@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733335"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="icons.svg"
+   inkscape:export-filename="C:\Users\llk\Documents\Private\interval-trainer\icons.svg.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="402.9793"
+     inkscape:cy="156.97019"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-229.26665)">
+    <g
+       id="g971"
+       transform="translate(0,153.79427)">
+      <rect
+         rx="1.9073486e-006"
+         ry="0"
+         y="75.699188"
+         x="0.021493241"
+         height="67.73333"
+         width="67.73333"
+         id="rect21"
+         style="fill:#ebc844;fill-opacity:1;stroke:none;stroke-width:1.06500006;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="rect21-8"
+         d="M 0.02148996,75.699188 V 91.568504 L 67.754822,130.36975 V 75.699188 Z"
+         style="fill:#ecaa38;fill-opacity:1;stroke:none;stroke-width:1.06500006;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         r="22.183371"
+         cy="109.91113"
+         cx="33.408527"
+         id="path864"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.13326931;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path864-6-4-7"
+         d="m 33.408784,81.212632 a 28.698687,28.698687 0 0 0 -0.329179,0.01654 l 0.110072,6.506063 a 22.18337,22.18337 0 0 1 0.219107,-0.0078 A 22.18337,22.18337 0 0 1 55.591927,109.9111 22.18337,22.18337 0 0 1 33.408784,132.09424 22.18337,22.18337 0 0 1 11.225126,109.9111 22.18337,22.18337 0 0 1 13.725232,99.722052 L 8.6645596,95.442771 A 28.698687,28.698687 0 0 0 4.7097611,109.91114 28.698687,28.698687 0 0 0 33.408784,138.60964 28.698687,28.698687 0 0 0 62.107291,109.91114 28.698687,28.698687 0 0 0 33.408784,81.212632 Z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.46611357;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="scale(0.81674928,1.2243659)"
+         id="text963"
+         y="94.910934"
+         x="18.4802"
+         style="font-style:normal;font-weight:normal;font-size:15.57065487px;line-height:9.73165894px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.38926637"
+         xml:space="preserve"><tspan
+           style="fill:#ffffff;stroke-width:0.38926637"
+           y="94.910934"
+           x="18.4802"
+           id="tspan961"
+           sodipodi:role="line">01:26</tspan></text>
+    </g>
+  </g>
+</svg>
