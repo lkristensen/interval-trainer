@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-01 03:33+0000\n"
+"POT-Creation-Date: 2017-08-01 09:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/programListView.qml:88 ../qml/Main.qml:106
+#: ../qml/programListView.qml:88 ../qml/Main.qml:108
 msgid "Delete"
 msgstr ""
 
-#: ../qml/Main.qml:86
+#: ../qml/Main.qml:87
 msgid "Programs"
 msgstr ""
 
-#: ../qml/Main.qml:119 ../qml/Main.qml:123 ../qml/NewProgramBottomEdge.qml:54
+#: ../qml/Main.qml:115
+msgid "Edit"
+msgstr ""
+
+#: ../qml/Main.qml:131 ../qml/Main.qml:135
 msgid "New Program"
 msgstr ""
 
-#: ../qml/Main.qml:128
+#: ../qml/Main.qml:140
 msgid "Cancel"
 msgstr ""
 
-#: ../qml/Main.qml:137
+#: ../qml/Main.qml:149
 msgid "Save"
+msgstr ""
+
+#: ../qml/Main.qml:178
+msgid "Title"
+msgstr ""
+
+#: ../qml/Main.qml:196
+msgid "Description"
 msgstr ""
 
 #: app.desktop.in.h:1

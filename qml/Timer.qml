@@ -143,15 +143,14 @@ Page {
                     dividerColor: "transparent"
                 }
 
-                trailingActionBar {
+                leadingActionBar {
                     actions: [
                         Action {
-                            id: settingsIcon
-                            objectName: "settingsIcon"
-                            iconName: "settings"
+                            id: backIcon
+                            objectName: "backIcon"
+                            iconName: "back"
                             onTriggered: {
-                                console.log("settings");
-                                //mainStack.push(Qt.resolvedUrl("./url.qml"))
+                                pageStack.pop()
                             }
                         }
                     ]
@@ -249,7 +248,8 @@ Page {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                console.log("Start / stop clicked");
+                    Haptics.play()
+                    console.log("Start / stop clicked");
                 }
             }
         }
@@ -276,6 +276,7 @@ Page {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    Haptics.play()
                     console.log("Music clicked");
                 }
             }

@@ -4,17 +4,22 @@ import Ubuntu.Components 1.3
 import "Lists" 0.1
 
 MainView {
+    id: mainView
     applicationName: 'interval-trainer.lkristensen'
     automaticOrientation: true
 
     width: units.gu(45)
     height: units.gu(75)
+            function launchEdit(id) {
+                console.log(testModel.get(id).title);
+            }
 
     PageStack {
         id: pageStack
 
         PageWithBottomEdge {
             id: programList
+
 
             ListModel {
                 id: testModel
@@ -86,9 +91,30 @@ MainView {
                 title: i18n.tr("Programs")
             }
 
+
+            EmptyState {
+                id: showEmpty
+                iconName: "alarm-clock"
+                title: i18n.tr("No Training Programs")
+                subTitle: i18n.tr("Swipe from bottom to create a new program")
+                anchors.centerIn: parent
+                visible: false
+            }
+
+            states: [
+                State {
+                    name: "EMPTY"
+                    when: (testModel.count == 0)  
+                    PropertyChanges { 
+                        target: showEmpty
+                        visible: true
+                    }
+                }
+            ]
+
             ListView {
                 id: programListView
-    
+
                 anchors {
                     fill: parent
                     topMargin: header.height
@@ -97,6 +123,7 @@ MainView {
 
                 model: testModel
                 delegate: ListItemWithActions {
+                    property int delegateIndex: index
                     height: units.gu(9)
                     width: parent.width
                     color: "white"
@@ -105,7 +132,14 @@ MainView {
                         iconName: "delete"
                         text: i18n.tr("Delete")
                         onTriggered: {
-                            testModel.remove(programListView.index)
+                            testModel.remove(delegateIndex)
+                        }
+                    }
+                    rightSideActions: Action {
+                        iconName: "edit"
+                        text: i18n.tr("Edit")
+                        onTriggered: {
+                            launchEdit(delegateIndex)
                         }
                     }
                     contents: Label {
@@ -113,6 +147,9 @@ MainView {
                         color: "black"
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
+                    }
+                    onItemClicked: {
+                        pageStack.push(Qt.resolvedUrl("Timer.qml"))
                     }
                 }
             }
@@ -144,51 +181,51 @@ MainView {
                      }
                 }
                 anchors.fill: parent
-            Column {
-                width: parent.width
-                spacing: units.gu(1)
-                anchors {
-                    fill: parent
-                    topMargin: header.height
-                    bottomMargin: parent.bottomEdgeHeight
-                }
-
-                TextField {
-                    id: programTitle
-                    objectName: "newProgramTitle"
-
+                Column {
+                    width: parent.width
+                    spacing: units.gu(1)
                     anchors {
-                        left: parent.left
-                        right: parent.right
-                        margins: units.gu(2)
+                        fill: parent
+                        topMargin: header.height + units.gu(1)
+                        bottomMargin: parent.bottomEdgeHeight
                     }
 
-                    placeholderText: i18n.tr("Title")
-                    onFocusChanged: {
-                        if(programTitle.focus) {
-                            flickable.makeMeVisible(programTitle);
+                    TextField {
+                        id: programTitle
+                        objectName: "newProgramTitle"
+
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: units.gu(2)
+                        }
+
+                        placeholderText: i18n.tr("Title")
+                        onFocusChanged: {
+                            if(programTitle.focus) {
+                                flickable.makeMeVisible(programTitle);
+                            }
+                        }
+                    }
+  
+                    TextArea{
+                        id: programDescription
+                        objectName: "newProgramDescription"
+
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: units.gu(2)
+                        }
+
+                        placeholderText: i18n.tr("Description")
+                        onFocusChanged: {
+                            if(programDescription.focus) {
+                                flickable.makeMeVisible(programDescription);
+                            }
                         }
                     }
                 }
-
-                TextArea{
-                    id: programDescription
-                    objectName: "newProgramDescription"
-
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        margins: units.gu(2)
-                    }
-
-                    placeholderText: i18n.tr("Description")
-                    onFocusChanged: {
-                        if(programDescription.focus) {
-                            flickable.makeMeVisible(programDescription);
-                        }
-                    }
-                }
-            }
             }
         }
     }
